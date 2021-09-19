@@ -14,7 +14,7 @@ jobs:
           command: yarn install
       - run:
           name: Start yarn
-          command: yarn start
+          command: yarn build
       - store_artifacts:
           path: dist/
 workflows:
