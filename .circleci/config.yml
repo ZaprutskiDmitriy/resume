@@ -27,18 +27,8 @@ jobs:
           command: yarn start
       - store_artifacts:
           path: dist/
-#workflows:
-#  version: 2
-#  commit:
-#    jobs:
-#      - ui-tests
-#  periodical:
-#    triggers:
-#      - schedule:
-#          cron: "1 4,8,12 * * *"
-#          filters:
-#            branches:
-#              only:
-#                - master
-#    jobs:
-#      - ui-tests
+workflows:
+  version: 2
+  commit:
+    jobs:
+      - ui-tests
